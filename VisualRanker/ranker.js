@@ -1,63 +1,82 @@
 var schoolsAndScores = {}; // Objects act as dictionaries in JavaScript.
 var schoolCount = 0; // No length function for Object keys in JS.
 var rankingIDs = ["#p1", "#p2", "#p3", "#p4", "#p5", "#p6", "#p7", "#p8", "#p9", "#p10"]; // IDs of ranking displays.
+var textIDs = ["#s1", "#s2", "#s3", "#s4", "#s5", "#s6", "#s7", "#s8", "#s9", "#s10"]; // IDs of text fields.
 
 $(function() {
-  $("#rankings").hide(); // Initially, rankings should not be shown.
-
-  $("#update").click(function() { // Creates a table with 10 highest scorers.
+  $("#update").click(function() { // Submits all the values of the text fields.
+    for (var i = 0; i < textIDs.length; i++) {
+      var winner = $(textIDs[i]).val(); // Easier to work with one variable when calling other functions.
+      addOrChangeSchool(winner, 10-i);
+    }
     getAndUpdateSchools(Object.keys(schoolsAndScores));
-    $("#rankings").show("slow"); // Specifies a "slow" animation.
+
+  });
+
+  $("#reset").click(function() {
+    for (var i=0; i < textIDs.length; i++) {
+      $(textIDs[i]).val("");
+    }
   });
 
   $("#b10").click(function() {
     var winner = $("#s10").val();
     addOrChangeSchool(winner, 1);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   $("#b9").click(function() {
     var winner = $("#s9").val();
     addOrChangeSchool(winner, 2);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   $("#b8").click(function() {
     var winner = $("#s8").val();
     addOrChangeSchool(winner, 3);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   $("#b7").click(function() {
     var winner = $("#s7").val();
     addOrChangeSchool(winner, 4);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   $("#b6").click(function() {
     var winner = $("#s6").val();
     addOrChangeSchool(winner, 5);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   $("#b5").click(function() {
     var winner = $("#s5").val();
     addOrChangeSchool(winner, 6);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   $("#b4").click(function() {
     var winner = $("#s4").val();
     addOrChangeSchool(winner, 7);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   $("#b3").click(function() {
     var winner = $("#s3").val();
     addOrChangeSchool(winner, 8);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   $("#b2").click(function() {
     var winner = $("#s2").val();
     addOrChangeSchool(winner, 9);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   $("#b1").click(function() {
     var winner = $("#s1").val();
     addOrChangeSchool(winner, 10);
+    getAndUpdateSchools(Object.keys(schoolsAndScores));
   });
 
   function getAndUpdateSchools(allSchools) { // Displays the ten best schools.
