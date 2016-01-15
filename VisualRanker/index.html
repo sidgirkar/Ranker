@@ -2,51 +2,68 @@
 <html>
   <head>
     <title>FBLA Visual Ranker</title>
+    <link rel="stylesheet" type="text/css" href="ranker.css">
+    <script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="ranker.js"></script>
   </head>
   <body>
     <h1> Enter the winning school for each position. </h1>
     <div id="textfields" name="textfields">
       <form>
-        <input type="text" name="p10" id="p10" value="10th place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s10" value="10th place:">
+        <button type="button" id="b10">Submit</button><br>
       </form>
       <form>
-        <input type="text" name="p9" id="p9" value="9th place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s9" value="9th place:">
+        <button type="button" id="b9">Submit</button><br>
       </form>
       <form>
-        <input type="text" name="p8" id="p8" value="8th place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s8" value="8th place:">
+        <button type="button" id="b8">Submit</button><br>
       </form>
       <form>
-        <input type="text" name="p7" id="p7" value="7th place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s7" value="7th place:">
+        <button type="button" id="b7">Submit</button><br>
       </form>
       <form>
-        <input type="text" name="p6" id="p6" value="6th place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s6" value="6th place:">
+        <button type="button" id="b6">Submit</button><br>
       </form>
       <form>
-        <input type="text" name="p5" id="p5" value="5th place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s5" value="5th place:">
+        <button type="button" id="b5">Submit</button><br>
       </form>
       <form>
-        <input type="text" name="p4" id="p4" value="4th place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s4" value="4th place:">
+        <button type="button" id="b4">Submit</button><br>
       </form>
       <form>
-        <input type="text" name="p3" id="p3" value="3rd place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s3" value="3rd place:">
+        <button type="button" id="b3">Submit</button><br>
       </form>
       <form>
-        <input type="text" name="p2" id="p2" value="2nd place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s2" value="2nd place:">
+        <button type="button" id="b2">Submit</button><br>
       </form>
       <form>
-        <input type="text" name="p1" id="p1" value="1st place: ">
-        <input type="submit" name="Submit"><br>
+        <input type="text" id="s1" value="1st place:">
+        <button type="button" id="b1">Submit</button><br>
       </form>
     </div>
-    <button type="button" id="update">Update Results</button> 
+    <div id="rankings" name="rankings">
+      <h4 id="p1">Not enough schools.</h4>
+      <h4 id="p2">Not enough schools.</h4>
+      <h4 id="p3">Not enough schools.</h4>
+      <h4 id="p4">Not enough schools.</h4>
+      <h4 id="p5">Not enough schools.</h4>
+      <h4 id="p6">Not enough schools.</h4>
+      <h4 id="p7">Not enough schools.</h4>
+      <h4 id="p8">Not enough schools.</h4>
+      <h4 id="p9">Not enough schools.</h4>
+      <h4 id="p10">Not enough schools.</h4>
+    </div>
+    <div id="buttondiv" name="buttondiv">
+      <button type="button" id="update">Update Results</button>
+    </div>
   </body>
 </html>
