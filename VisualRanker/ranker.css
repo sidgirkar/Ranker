@@ -8,5 +8,12 @@ h1 {
 }
 
 #textfields {
-  text-align: center;
+  text-align: left;
+  float: left;
+}
+
+#rankings {
+  text-align: right;
+  float: left;
+  margin-left: 72px;
 }
